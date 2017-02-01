@@ -6,8 +6,8 @@
     <!-- P A R E N T P R O J E C T D E S C R I P T I O N -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>com.hpe.cosd</groupId>
-        <artifactId>usergroupquery</artifactId>
+        <groupId>com.adobe.cq.jqom</groupId>
+        <artifactId>jqom</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
@@ -15,14 +15,14 @@
     <!-- P R O J E C T D E S C R I P T I O N -->
     <!-- ====================================================================== -->
 
-    <artifactId>usergroupquery-content</artifactId>
+    <artifactId>jqom-content</artifactId>
     <packaging>content-package</packaging>
-    <name>User Groups Report Package</name>
+    <name>My Project Package</name>
 
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>usergroupquery-bundle</artifactId>
+            <artifactId>jqom-bundle</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
@@ -52,13 +52,13 @@
                 <artifactId>content-package-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <group>HP-E - CoSD</group>
+                    <group>My Company</group>
                     <filterSource>src/main/content/META-INF/vault/filter.xml</filterSource>
                     <embeddeds>
                         <embedded>
                             <groupId>${project.groupId}</groupId>
-                            <artifactId>usergroupquery-bundle</artifactId>
-                            <target>/apps/usergroupquery/install</target>
+                            <artifactId>jqom-bundle</artifactId>
+                            <target>/apps/myproject/install</target>
                         </embedded>
                     </embeddeds>
                     <targetURL>http://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>

@@ -6,8 +6,8 @@
     <!-- P A R E N T P R O J E C T D E S C R I P T I O N -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>com.hpe.cosd</groupId>
-        <artifactId>usergroupquery</artifactId>
+        <groupId>com.adobe.cq.jqom</groupId>
+        <artifactId>jqom</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
@@ -15,9 +15,9 @@
     <!-- P R O J E C T D E S C R I P T I O N -->
     <!-- ====================================================================== -->
 
-    <artifactId>usergroupquery-bundle</artifactId>
+    <artifactId>jqom-bundle</artifactId>
     <packaging>bundle</packaging>
-    <name>User Groups Report Bundle</name>
+    <name>My Project Bundle</name>
 
     <dependencies>
         <dependency>
@@ -60,6 +60,39 @@
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.jcr.api</artifactId>
         </dependency>
+
+<!-- Custom -->
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>jackrabbit-api</artifactId>
+</dependency>
+<dependency>
+	<groupId>org.apache.jackrabbit</groupId>
+	<artifactId>jackrabbit-webdav</artifactId>
+</dependency>
+	<dependency>
+	<groupId>org.apache.jackrabbit</groupId>
+	<artifactId>jackrabbit-jcr-commons</artifactId>
+	<version>2.6.2</version>
+	<scope>provided</scope>
+</dependency>
+<!-- <dependency>
+	<groupId>com.google.guava</groupId>
+	<artifactId>guava</artifactId>
+</dependency>
+ -->
+ <dependency>
+	<groupId>org.apache.sling</groupId>
+	<artifactId>org.apache.sling.jcr.base</artifactId>
+</dependency>
+<dependency>
+	<groupId>org.apache.sling</groupId>
+	<artifactId>org.apache.sling.commons.json</artifactId>
+	<version>2.0.18</version>
+	<type>bundle</type>
+</dependency>
+
+
     </dependencies>
 
     <!-- ====================================================================== -->
@@ -85,7 +118,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Bundle-SymbolicName>com.hpe.cosd.usergroupquery-bundle</Bundle-SymbolicName>
+                        <Bundle-SymbolicName>com.adobe.cq.jqom.jqom-bundle</Bundle-SymbolicName>
                     </instructions>
                 </configuration>
             </plugin>
@@ -93,7 +126,7 @@
                 <groupId>org.apache.sling</groupId>
                 <artifactId>maven-sling-plugin</artifactId>
                 <configuration>
-                    <slingUrl>http://${crx.host}:${crx.port}/apps/usergroupquery/install</slingUrl>
+                    <slingUrl>http://${crx.host}:${crx.port}/apps/searchusers/install</slingUrl>
                     <usePut>true</usePut>
                 </configuration>
             </plugin>

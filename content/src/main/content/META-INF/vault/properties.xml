@@ -6,8 +6,8 @@
 <entry key="version">1.0-SNAPSHOT</entry>
 <entry key="dependencies" />
 <entry key="packageFormatVersion">2</entry>
-<entry key="description">User Groups Report Package</entry>
-<entry key="group">HP-E - CoSD</entry>
-<entry key="name">usergroupquery-content</entry>
-<entry key="path">/etc/packages/HP-E - CoSD/usergroupquery-content-1.0-SNAPSHOT.zip</entry>
+<entry key="description">My Project Package</entry>
+<entry key="group">My Company</entry>
+<entry key="name">jqom-content</entry>
+<entry key="path">/etc/packages/My Company/jqom-content-1.0-SNAPSHOT.zip</entry>
 </properties>

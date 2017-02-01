@@ -5,13 +5,13 @@
     <!-- P A R E N T P R O J E C T D E S C R I P T I O N -->
     <!-- ====================================================================== -->
 
-    <groupId>com.hpe.cosd</groupId>
-    <artifactId>usergroupquery</artifactId>
+    <groupId>com.adobe.cq.jqom</groupId>
+    <artifactId>jqom</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>User Groups Report - Reactor Project</name>
-    <description>Maven Multimodule project for User Groups Report.</description>
+    <name>My Project - Reactor Project</name>
+    <description>Maven Multimodule project for My Project.</description>
 
     <prerequisites>
         <maven>3.0.2</maven>
@@ -92,9 +92,61 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.8.1</version>
+                <version>4.11</version>
                 <scope>test</scope>
             </dependency>
+
+<!-- Custom -->
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>jackrabbit-api</artifactId>
+    <version>2.3.6</version>
+</dependency>
+<dependency>
+	<groupId>org.apache.jackrabbit</groupId>
+	<artifactId>jackrabbit-webdav</artifactId>
+	<version>2.6.2</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>com.day.cq.wcm</groupId>
+	<artifactId>cq-wcm-api</artifactId>
+	<version>5.6.6</version>
+	<scope>provided</scope>
+</dependency>
+	<dependency>
+		<groupId>com.day.cq.wcm</groupId>
+		<artifactId>cq-wcm-core</artifactId>
+		<version>5.6.14</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>com.day.cq.wcm</groupId>
+		<artifactId>cq-wcm-commons</artifactId>
+		<version>5.6.4</version>
+		<scope>provided</scope>
+	</dependency>
+<!-- 	<dependency>
+		<groupId>com.google.guava</groupId>
+		<artifactId>guava</artifactId>
+		<version>15.0</version>
+		<scope>provided</scope>
+	</dependency>
+ -->
+
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.jcr.base</artifactId>
+    <version>2.0.4-incubator</version>
+</dependency>
+<dependency>
+	<groupId>org.apache.sling</groupId>
+	<artifactId>org.apache.sling.commons.json</artifactId>
+	<version>2.0.18</version>
+	<type>bundle</type>
+</dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -244,4 +296,12 @@
     <module>bundle</module>
     <module>content</module>
   </modules>
+
+  <dependencies>
+  	<dependency>
+  		<groupId>org.apache.commons</groupId>
+  		<artifactId>commons-lang3</artifactId>
+  		<version>3.3.1</version>
+  	</dependency>
+  </dependencies>
 </project>
